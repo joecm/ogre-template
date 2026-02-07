@@ -1,0 +1,24 @@
+#include "BaseApp.hpp"
+#include <iostream>
+
+class Example : public BaseApp {
+    protected:
+        void createScene() override
+        {
+            
+        }
+};
+
+int main(int argc, char** argv)
+{
+    try {
+        Example app;
+        app.initApp();
+        app.getRoot()->startRendering();
+        app.closeApp();
+    } catch (const std::exception& e) {
+        std::cerr << "Error occurred during execution: " << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }
+    return EXIT_SUCCESS;
+}

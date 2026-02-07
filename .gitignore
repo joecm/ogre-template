@@ -1,0 +1,7 @@
+# Archivos generados
+obj/
+compile_commands.json
+
+# Binarios
+*.o
+*.out
