@@ -5,7 +5,7 @@
 class BaseApp : public OgreBites::ApplicationContext, public OgreBites::InputListener {
     public:
         //Standard constructor
-        BaseApp() : OgreBites::ApplicationContext("BaseApp") {
+        BaseApp(Ogre::String name) : OgreBites::ApplicationContext(name) {
             mScnMgr=nullptr;
             mCam=nullptr;
             mNodeCam=nullptr;
@@ -53,14 +53,6 @@ class BaseApp : public OgreBites::ApplicationContext, public OgreBites::InputLis
                 return true;
             }
             
-            Ogre::SceneNode* nodeSinbad = mScnMgr->getSceneNode("SinbadNode");
-            if (nodeSinbad) {
-                const Ogre::Radian step = Ogre::Degree(5.0F);
-                if(evt.keysym.sym == 'w') nodeSinbad->pitch(step);
-                if(evt.keysym.sym == 's') nodeSinbad->pitch(-step);
-                if(evt.keysym.sym == 'a') nodeSinbad->yaw(step);
-                if(evt.keysym.sym == 'd') nodeSinbad->yaw(-step);
-            }
 
             // Modo Render (R)
             if (mNodeCam && evt.keysym.sym == 'r') {
