@@ -2,7 +2,7 @@
 # Makefile Genérico :: Módulo 2. Curso Experto Desarrollo Videojuegos
 # Carlos González Morcillo     Escuela Superior de Informática (UCLM)
 # --------------------------------------------------------------------
-EXEC := example1
+EXEC := Ogbook_1
 
 
 DIRSRC := src/
