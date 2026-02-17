@@ -8,7 +8,9 @@ class Example : public BaseApp {
         void createScene() override
         {
             mScnMgr->setAmbientLight(Ogre::ColourValue(1.0F, 1.0F, 1.0F));
-            // see Readme.txt
+            Ogre::Entity* ent = mScnMgr->createEntity("Sinbad", "Sinbad.mesh");
+            Ogre::SceneNode* node = mScnMgr->getRootSceneNode()->createChildSceneNode("SinbadNode");
+            node->attachObject(ent);
         }
 };
 
